@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- Data source initialization -->
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/db_java_project?characterEncoding=utf-8"/>
+        <property name="username" value="stanislav"/>
+        <property name="password" value="Stasandnansy19595"/>
+    </bean>
+
+    <!-- Here we're defining studentJDBCTemplate bean -->
+    <bean id="jdbcTemplateAnimals"
+          class="jdbc.AnimalsJDBC">
+        <property name="dataSource"  ref="dataSource" />
+    </bean>
+    <bean id="jdbcTemplateLocation"
+          class="jdbc.LocationJDBC">
+        <property name="dataSource"  ref="dataSource" />
+    </bean>
+    <bean id="jdbcTemplateAviary"
+          class="jdbc.AviaryJDBC">
+        <property name="dataSource"  ref="dataSource" />
+    </bean>
+
+</beans>

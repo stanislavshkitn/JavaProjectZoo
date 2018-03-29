@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Новая локация</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles-new_location.css}"/>
+</head>
+
+<script th:src="@{/js/jquery/jquery.js}"></script>
+<script th:src="@{/js/jquery/jquery_ui.js}"></script>
+<script th:src="@{/js/js-new-location.js}"></script>
+<script th:src="@{/js/drag_drop.js}"></script>
+<script th:src="@{/js/ajax-delete-animal.js}"></script>
+<script th:src="@{/js/ajax-add-animal.js}"></script>
+<script th:src="@{/js/ajax-save-location.js}"></script>
+<body>
+    <div class="base">
+        <div class="block-count-aviary">
+            Количество вольеров: <div class="count-aviary">6</div>
+            <a class="button" id="button-alter-count-show">Изменить</a>
+
+        </div>
+        <div class="flex-container">
+            <div class="block_aviary">
+                <div class="aviary" id="id-aviary-1" data-number="1">
+
+                </div>
+                <div class="aviary" id="id-aviary-2" data-number="2">
+
+                </div>
+                <div class="aviary" id="id-aviary-3" data-number="3">
+
+                </div>
+                <div class="aviary" id="id-aviary-4" data-number="4">
+
+                </div>
+                <div class="aviary" id="id-aviary-5" data-number="5">
+
+                </div>
+                <div class="aviary" id="id-aviary-6" data-number="6">
+
+                </div>
+            </div>
+            <div class="block_animals">
+                <div class="menu-button">
+                    <a class="button" id="show-save-location" href="javascript:">Сохранить</a>
+                    <div class="block-save">
+
+                    </div>
+                    <div class="block-error">
+
+                    </div>
+                </div>
+                <div  class="tbl_animals">
+                    <div th:each="animal:${animals}" th:attr="data-animal=${animal.name}, data-is-predator=${animal.is_predator}"
+                        th:class="${animal.is_predator}? 'predator animal': 'not-predator animal'">
+                        <div class="name-animal" th:text="${animal.name}"></div>
+                        <a class="delete-animal" th:id="'id_animal_' + ${animal.name}"
+                           th:attr="data-name=${animal.name}" href="javascript:">Удалить</a>
+                    </div>
+                </div>
+                <a class="button" id="button-add-show" href="javascript:">Добавить</a>
+                <div class="form-add-animal">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

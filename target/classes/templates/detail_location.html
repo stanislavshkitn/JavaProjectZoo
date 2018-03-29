@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Новая локация</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles-new_location.css}"/>
+</head>
+<body>
+<div class="base">
+    <a href="/list-location"> Список сохранённых</a>
+    <div class="flex-container">
+        <div class="block_aviary">
+            <div class="aviary" th:each="aviary:${aviarys}">
+                <div th:each="animal:${aviary.array_Animals}">
+                    <div class="name-animal" th:text="${animal}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

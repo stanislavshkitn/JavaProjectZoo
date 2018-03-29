@@ -1,0 +1,16 @@
+/home/stanislav/IdeaProjects/Test_1/src/main/java/controllers/HelloController.java
+/home/stanislav/IdeaProjects/Test_1/src/main/java/dao/LocationJDBC.java
+/home/stanislav/IdeaProjects/Test_1/src/main/java/dao/AviaryMapper.java
+/home/stanislav/IdeaProjects/Test_1/src/main/java/controllers/Application.java
+/home/stanislav/IdeaProjects/Test_1/src/main/java/controllers/NewLocationController.java
+/home/stanislav/IdeaProjects/Test_1/src/main/java/dao/LocationMapper.java
+/home/stanislav/IdeaProjects/Test_1/src/main/java/models/Location.java
+/home/stanislav/IdeaProjects/Test_1/src/main/java/dao/AnimalsJDBC.java
+/home/stanislav/IdeaProjects/Test_1/src/main/java/models/Aviary.java
+/home/stanislav/IdeaProjects/Test_1/src/main/java/models/Greeting.java
+/home/stanislav/IdeaProjects/Test_1/src/main/java/dao/AnimalsMapper.java
+/home/stanislav/IdeaProjects/Test_1/src/main/java/controllers/IndexController.java
+/home/stanislav/IdeaProjects/Test_1/src/main/java/dao/AnimalsDao.java
+/home/stanislav/IdeaProjects/Test_1/src/main/java/controllers/Ajax.java
+/home/stanislav/IdeaProjects/Test_1/src/main/java/models/Animal.java
+/home/stanislav/IdeaProjects/Test_1/src/main/java/dao/AviaryJDBC.java
